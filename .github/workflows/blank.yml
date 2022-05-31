@@ -98,4 +98,6 @@ jobs:
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy -Ddeployment.name="greetings-acm310590909" \
           -Dusername=${{ secrets.ANYPOINT_USERNAME }} \
-          -Dpassword=${{ secrets.ANYPOINT_PASSWORD }} 
+          -Dpassword=${{ secrets.ANYPOINT_PASSWORD }} \
+          -Dmessage="A new test message"
+
